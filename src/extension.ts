@@ -15,7 +15,7 @@ let hashmap = {}
 export async function activate(context: vscode.ExtensionContext) {
 	const teamDataApi = async () => {
 		let teamData = await axios.get(`https://api.clickup.com/api/v2/team`, {
-		  headers: { Authorization: "pk_3344635_OKQECX1X18DADHGYTS13GY1UI8C8SCH7" },
+		  headers: { Authorization: "" },
 		});
 		return teamData.data.teams;
 	  };
@@ -25,7 +25,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		  `https://api.clickup.com/api/v2/team/${id}/space?archived=false`,
 		  {
 			headers: {
-			  Authorization: "pk_3344635_OKQECX1X18DADHGYTS13GY1UI8C8SCH7",
+			  Authorization: "",
 			},
 		  }
 		);
@@ -38,7 +38,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		  `https://api.clickup.com/api/v2/space/${id}/list?archived=false`,
 		  {
 			headers: {
-			  Authorization: "pk_3344635_OKQECX1X18DADHGYTS13GY1UI8C8SCH7",
+			  Authorization: "",
 			},
 		  }
 		);
